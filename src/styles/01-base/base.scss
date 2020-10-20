@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63.5%;
+
+  @include respond(laptop) {
+    font-size: 61.5%;
+  }
+
+  @include respond(tablet) {
+    font-size: 60.5%;
+  }
+}
+
+body {
+  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: $color-black;
+  background-image: url('./../assets/ev-zQtmZjMdejU-unsplash.jpg');
+
+  @include respond(tablet) {
+    align-items: stretch;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}

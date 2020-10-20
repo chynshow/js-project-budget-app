@@ -1,0 +1,12 @@
+.c-input,
+.c-select {
+  border: 0;
+  padding: 1rem;
+  border-radius: 3px;
+  outline: 0;
+
+  &::placeholder {
+    color: $color-placeholder-text;
+    font-size: $font-size-placeholder-text;
+  }
+}

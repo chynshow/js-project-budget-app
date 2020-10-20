@@ -1,0 +1,11 @@
+.c-title {
+  padding: 2rem;
+  font-weight: 400;
+  font-size: $font-size-lg;
+  text-align: center;
+
+  @include respond(laptop) {
+    padding: 1rem;
+    font-size: calc(#{$font-size-lg} - 0.2rem);
+  }
+}

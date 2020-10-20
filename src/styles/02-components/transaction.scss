@@ -1,0 +1,54 @@
+.l-transaction-container {
+  display: flex;
+  align-items: center;
+}
+
+.c-transaction {
+  height: $transHeigth;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: $font-size-md;
+  animation: scale 1000ms linear both;
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__perc {
+    background: rgba($color: $color-primary-1, $alpha: 0.8);
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    font-size: $font-size-sm;
+    margin-left: 0.5rem;
+  }
+  &__del-btn {
+    padding: 0rem;
+    width: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 1.5rem;
+      fill: $color-black;
+    }
+  }
+  &:hover &__del-btn {
+    width: 1.7rem;
+    margin-left: 0.8rem;
+    opacity: 1;
+  }
+
+  &--exp {
+    padding: 1.15rem;
+    border: 1px dashed $color-placeholder-text;
+  }
+}

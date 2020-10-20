@@ -1,0 +1,80 @@
+.l-budget-total-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.c-budget-total {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-primary-2;
+  border-radius: 1rem 1rem 0 0;
+
+  @include respond(tablet) {
+    border-radius: 0;
+  }
+
+  &__icon-container {
+    padding: 1.5rem;
+    background: $color-white;
+    border-radius: 1rem;
+    box-shadow: 0.9rem -0.9rem 0px 0 rgba($color: $color-white, $alpha: 0.5);
+    animation: extend-shadow 800ms linear both;
+  }
+
+  &__current-date {
+    animation: from-left 1000ms linear both;
+  }
+
+  &__value-container {
+    display: flex;
+    align-items: center;
+    min-width: 30%;
+    padding: 1.5rem;
+    font-size: $font-size-md;
+    background: $color-white;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+    margin-bottom: 1rem;
+
+    &--active {
+      animation: scale 1000ms linear both;
+    }
+
+    @include respond(laptop) {
+      min-width: 50%;
+    }
+
+    @include respond(tablet) {
+      min-width: 80%;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__inc {
+    @extend .c-budget-total__value-container;
+  }
+  &__exp {
+    padding: 1.2rem;
+    @extend .c-budget-total__value-container;
+    border: 1px dashed $color-placeholder-text;
+    margin-bottom: 0;
+  }
+  &__value,
+  &__inc-value,
+  &__exp-value {
+    padding-left: 0.5rem;
+  }
+
+  &__exp-percentage {
+    background: rgba($color: $color-primary-1, $alpha: 0.8);
+    padding: 0.4rem;
+    margin-left: 1rem;
+    font-size: $font-size-sm;
+    border-radius: 0.5rem;
+    box-shadow: 0.7rem -0.7rem 0 0 rgba($color: $color-white, $alpha: 0.5);
+  }
+}

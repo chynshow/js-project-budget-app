@@ -1,0 +1,15 @@
+.c-btn {
+  border: 0;
+  outline: 0;
+  padding: 1.1rem;
+  border-radius: 3px;
+  background: transparent;
+  color: $color-white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  transform: scale(1);
+
+  &:active {
+    transform: scale(1.1);
+  }
+}

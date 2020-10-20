@@ -1,0 +1,38 @@
+.c-budget-transactions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $color-primary-2;
+
+  &__container {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    max-height: calc((#{$transHeigth}* 3) + 1rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @include respond(tablet) {
+      min-width: 75%;
+    }
+  }
+
+  &__info {
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background: rgba($color: #b4dcfd, $alpha: 0.9);
+    font-size: $font-size-sm;
+    text-align: center;
+    &--hide {
+      display: none;
+    }
+  }
+  @include respond(laptop) {
+    border-radius: 0;
+  }
+
+  @include respond(tablet) {
+    border-radius: 0;
+  }
+}
